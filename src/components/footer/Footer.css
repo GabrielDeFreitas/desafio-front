@@ -1,0 +1,15 @@
+.app-footer {
+    background: #F25955;
+    padding: .5rem 2rem;
+    text-align: center;
+}
+.app-footer__news  {
+    background: #343A41;
+    padding: .5rem 2rem;
+    text-align: center;
+}
+
+.app-footer__message {
+    color: #FFFF;
+    font-family: sans-serif;
+}

@@ -1,0 +1,12 @@
+.app-headerTop {
+    align-items: center;
+    background: #F25955;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.app-headerTop__message {
+    color: #FFFF;
+    font-family: sans-serif;
+}

@@ -4,9 +4,22 @@
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
+
 }
 
 .app-headerTop__message {
     color: #FFFF;
     font-family: sans-serif;
+    font-size: 14px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.app-header__margen {
+    margin: 0;
+    display: contents;
+}
+
+.app-sub{
+    margin-left: 20px;
 }

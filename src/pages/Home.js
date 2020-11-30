@@ -12,19 +12,36 @@ import { Card, Button, CardImg, CardTitle, CardText, CardDeck, CardSubtitle, Car
 import { Row, Col } from 'reactstrap';
 import { CardImgOverlay } from 'reactstrap';
 import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { FaSearch, FaArrowDown } from "react-icons/fa"
 
 const Home = () => (
     <>
         <HeaderTop />
         <Header />
+
+        <div className="app-destaque">
+            <div className="app-destaque__text">
+                <div>
+                    <h1 className="app-text" style={{ fontWeight: "bold" }}>Encontre o imóvel ideal</h1>
+                    <h1 className="app-text" style={{ fontWeight: "bold" }}>Para você e sua família</h1>
+                    <h1 className="app-text" style={{ fontWeight: "bold" }}>Morar na Praia!</h1>
+                </div><br />
+                <div>
+                    <Button color="danger">Quero <spam style={{ fontWeight: "bold" }}>Alugar!</spam></Button>{' '}
+                    <Button color="danger">Quero <spam style={{ fontWeight: "bold" }}>Comprar!</spam></Button>{' '}
+                </div>
+            </div>
+        </div>
+
+
         <Container>
 
             <div className="container">
                 <Row xs="1" sm="2" md="4">
                     <Col>
                         <FormGroup >
-                            <Label>Comprar ou Alugar?</Label>
                             <Col>
+                                <Label style={{ fontWeight: "bold" }}>Comprar ou Alugar?</Label>
                                 <Input type="select" name="select" id="exampleSelect">
                                     <option>1</option>
                                     <option>2</option>
@@ -37,8 +54,8 @@ const Home = () => (
                     </Col>
                     <Col>
                         <FormGroup >
-                            <Label>O que você quer ?</Label>
                             <Col>
+                                <Label style={{ fontWeight: "bold" }}>O que você quer ?</Label>
                                 <Input type="select" name="select" id="exampleSelect">
                                     <option>1</option>
                                     <option>2</option>
@@ -51,8 +68,8 @@ const Home = () => (
                     </Col>
                     <Col>
                         <FormGroup >
-                            <Label>Qual tipo do imóvel ?</Label>
                             <Col>
+                                <Label style={{ fontWeight: "bold" }}>Qual tipo do imóvel ?</Label>
                                 <Input type="select" name="select" id="exampleSelect">
                                     <option>1</option>
                                     <option>2</option>
@@ -65,8 +82,8 @@ const Home = () => (
                     </Col>
                     <Col>
                         <FormGroup >
-                            <Label>Onde você quer ?</Label>
                             <Col>
+                                <Label style={{ fontWeight: "bold" }}>Onde você quer ?</Label>
                                 <Input type="select" name="select" id="exampleSelect">
                                     <option>1</option>
                                     <option>2</option>
@@ -81,87 +98,74 @@ const Home = () => (
                 </Row>
 
                 <Row>
-                    <Col xs="6">
-                        Filtro avançado
+                    <Col>
+                        <FormGroup >
+                            <Col>
+                                <Label>Filtro avançado</Label>{' '}<FaArrowDown />
+                            </Col>
+                        </FormGroup>
                     </Col>
-                    <Col xs="6">
-                        <Button color="danger" block>Pesquisar</Button><br />
+
+                    <Col className="text-right">
+                        <FormGroup >
+                            <Col>
+                                <Button color="danger"><FaSearch />{' '}Pesquisar</Button>
+                            </Col>
+                        </FormGroup>
                     </Col>
                 </Row>
+
             </div>
+
             <div className="container app-container__alugar">
                 <div>
                     <h1 className="text-center" style={{ fontWeight: "bold" }}>Ambiente no seu <spam className="app-text">estilo</spam> </h1>
-                    <h4 className="text-center app-iptu__h5">Encontre o imóvel com a experiência que você quer viver</h4><br/>
-
-
-                    <br/><CardColumns>
-                        <Card inverse>
-                            <CardImg width="100%" src="https://system.soprojetos.com.br/files/601/project_page_e/COD_91_-_IMG_6.jpg?1491507590" alt="Card image cap" />
+                    <h4 className="text-center app-iptu__h5">Encontre o imóvel com a experiência que você quer viver</h4><br />
+                    <hr />
+                    <br /><CardColumns>
+                        <Card inverse >
+                            <CardImg width="100%" src="https://i0.wp.com/blog.movingimoveis.com.br/wp-content/uploads/2018/07/apartamento-em-cobertura-quais-as-vantagens-e-desvantagens.jpeg?fit=2000%2C1333&ssl=1" alt="Card image cap" />
                             <CardImgOverlay>
-                                <CardTitle tag="h5">Card Title</CardTitle>
-                                <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                                <CardText>
-                                    <small className="text-muted">Last updated 3 mins ago</small>
-                                </CardText>
+                                <CardTitle tag="h5" className="text-center">Cobertura</CardTitle>
+                            </CardImgOverlay>
+                        </Card>
+                        <Card inverse>
+                            <CardImg width="100%" src="https://i0.wp.com/blog.movingimoveis.com.br/wp-content/uploads/2018/07/apartamento-em-cobertura-quais-as-vantagens-e-desvantagens.jpeg?fit=2000%2C1333&ssl=1" alt="Card image cap" />
+                            <CardImgOverlay>
+                                <CardTitle tag="h5" className="text-center">Condimínio Fechado</CardTitle>
+                            </CardImgOverlay>
+                        </Card>
+                        <Card inverse>
+                            <CardImg width="100%" src="https://i0.wp.com/blog.movingimoveis.com.br/wp-content/uploads/2018/07/apartamento-em-cobertura-quais-as-vantagens-e-desvantagens.jpeg?fit=2000%2C1333&ssl=1" alt="Card image cap" />
+                            <CardImgOverlay>
+                                <CardTitle tag="h5" className="text-center">Alto Padrão</CardTitle>
                             </CardImgOverlay>
                         </Card>
                         <Card inverse>
                             <CardImg width="100%" src="https://system.soprojetos.com.br/files/601/project_page_e/COD_91_-_IMG_6.jpg?1491507590" alt="Card image cap" />
                             <CardImgOverlay>
-                                <CardTitle tag="h5">Card Title</CardTitle>
-                                <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                                <CardText>
-                                    <small className="text-muted">Last updated 3 mins ago</small>
-                                </CardText>
+                                <CardTitle tag="h5" className="text-center">Compacto</CardTitle>
                             </CardImgOverlay>
                         </Card>
                         <Card inverse>
                             <CardImg width="100%" src="https://system.soprojetos.com.br/files/601/project_page_e/COD_91_-_IMG_6.jpg?1491507590" alt="Card image cap" />
                             <CardImgOverlay>
-                                <CardTitle tag="h5">Card Title</CardTitle>
-                                <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                                <CardText>
-                                    <small className="text-muted">Last updated 3 mins ago</small>
-                                </CardText>
+                                <CardTitle tag="h5" className="text-center">De frente para o Mar</CardTitle>
                             </CardImgOverlay>
                         </Card>
                         <Card inverse>
                             <CardImg width="100%" src="https://system.soprojetos.com.br/files/601/project_page_e/COD_91_-_IMG_6.jpg?1491507590" alt="Card image cap" />
                             <CardImgOverlay>
-                                <CardTitle tag="h5">Card Title</CardTitle>
-                                <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                                <CardText>
-                                    <small className="text-muted">Last updated 3 mins ago</small>
-                                </CardText>
+                                <CardTitle tag="h5" className="text-center">Lojas e Salas</CardTitle>
                             </CardImgOverlay>
                         </Card>
-                        <Card inverse>
-                            <CardImg width="100%" src="https://system.soprojetos.com.br/files/601/project_page_e/COD_91_-_IMG_6.jpg?1491507590" alt="Card image cap" />
-                            <CardImgOverlay>
-                                <CardTitle tag="h5">Card Title</CardTitle>
-                                <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                                <CardText>
-                                    <small className="text-muted">Last updated 3 mins ago</small>
-                                </CardText>
-                            </CardImgOverlay>
-                        </Card>
-                        <Card inverse>
-                            <CardImg width="100%" src="https://system.soprojetos.com.br/files/601/project_page_e/COD_91_-_IMG_6.jpg?1491507590" alt="Card image cap" />
-                            <CardImgOverlay>
-                                <CardTitle tag="h5">Card Title</CardTitle>
-                                <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                                <CardText>
-                                    <small className="text-muted">Last updated 3 mins ago</small>
-                                </CardText>
-                            </CardImgOverlay>
-                        </Card>
-                    </CardColumns><br/>
+                    </CardColumns><br />
                 </div>
             </div>
 
             <div className="container">
-                <h1 className="app-text" style={{ fontWeight: "bold" }}>À Venda</h1>
+                <h1 className="app-text" style={{ fontWeight: "bold" }}>À Venda <spam><a href="url">Ver mais</a></spam></h1>
+                <hr />
                 <CardDeck>
                     <Card>
                         <CardImg top width="100%" src="https://cf.bstatic.com/images/hotel/max1024x768/136/136609367.jpg" alt="Card image cap" />
@@ -220,8 +224,8 @@ const Home = () => (
 
             <div className="container app-container__alugar">
                 <div>
-                    <h1 className="app-text" style={{ fontWeight: "bold" }}>Para Alugar</h1>
-                    <spam><a href="url">Ver mais</a></spam>
+                    <h1 className="app-text" style={{ fontWeight: "bold" }}>Para Alugar <spam><a href="url">Ver mais</a></spam></h1>
+                    <hr />
                 </div>
                 <CardDeck>
                     <Card>
@@ -279,7 +283,7 @@ const Home = () => (
             </div><br />
 
         </Container>
-        {/*<Footer />*/}
+        <Footer />
     </>
 )
 

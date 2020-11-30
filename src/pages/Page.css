@@ -7,6 +7,7 @@
 
 .app-text {
     color: #F25955;
+    margin: 0px;
 }
 
 .app-container__background {
@@ -29,9 +30,7 @@
 
 .app-destaque {
     background: #F9F9F9; 
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-bottom: 20px;
+    margin-bottom: -20px;
 }
 
 .app-background__item1 {
@@ -53,5 +52,20 @@
     margin: 0;
 }
 
+.app-textarea{
+    height: 400px;
+}
 
+.app-destaque__text{
+    padding: 4rem;
+}
 
+.app-facebook{
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+.app-twitter{
+    background-color: #1DA1F2;
+    border-color: #1DA1F2;
+}

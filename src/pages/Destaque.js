@@ -14,21 +14,23 @@ import { ButtonToggle } from "reactstrap";
 import { Card, CardHeader, CardFooter, CardBody, CardTitle, CardText } from 'reactstrap';
 import Table from 'react-bootstrap/Table'
 
-import { FaBeer, FaFacebookSquare, FaTwitter, FaInstagramSquare, FaCheck, FaWhatsapp } from 'react-icons/fa';
+import { FaBeer, FaFacebookSquare, FaTwitter, FaInstagram, FaCheck, FaWhatsapp } from 'react-icons/fa';
 
 
 const Destaque = () => (
     <>
         <HeaderTop />
         <Header />
+
+        <div className="app-destaque">
+            <div className="app-destaque__text">
+                <h1 className="app-text" style={{ fontWeight: "bold" }}>Linda Casa no Rio Tavares com vista para o Mar</h1>
+                <p className="app-iptu__h5" style={{ fontWeight: "bold" }}>Imóvel Residencial - Apartamento - Campeche</p>
+            </div>
+        </div>
+
         <Container>
-
             <Container>
-                <div className="app-destaque">
-                    <h1 className="app-text" style={{fontWeight: "bold"}}>Linda Casa no Rio Tavares com vista para o Mar</h1>
-                    <p>Imóvel Residencial - Apartamento - Campeche</p>
-                </div>
-
                 <Row>
                     <Col xs="8">
 
@@ -37,7 +39,7 @@ const Destaque = () => (
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="https://www.decorfacil.com/wp-content/uploads/2018/06/20180614casas-pequenas-60.jpg"
+                                        src="https://blog.wedy.com/wp-content/uploads/2019/09/como-escolher-eletrodomesticos-fogao-a-geladeira-07-700x471.jpg"
                                         alt="First slide"
                                     />
                                     <Carousel.Caption>
@@ -47,7 +49,7 @@ const Destaque = () => (
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="https://www.tuacasa.com.br/wp-content/uploads/2018/05/casas-por-dentro-3-730x487.jpg"
+                                        src="https://www.diarioinduscom.com.br/wp-content/uploads/2020/11/mat1b-700x471.jpg"
                                         alt="Third slide"
                                     />
 
@@ -58,7 +60,7 @@ const Destaque = () => (
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="https://www.ideiasdecor.com/wp-content/uploads/2019/03/casas-pequenas-49.jpg"
+                                        src="https://i0.wp.com/revistainterarq.com.br/wp-content/uploads/2018/08/MGL8144-700x471.jpg"
                                         alt="Third slide"
                                     />
 
@@ -69,7 +71,7 @@ const Destaque = () => (
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="https://imagens-revista.vivadecora.com.br/uploads/2017/10/apartamento-decorado-com-m%C3%B3veis-planejados-e-sala-com-cozinha-americana-Foto-Pinterest.jpg"
+                                        src="https://i0.wp.com/revistainterarq.com.br/wp-content/uploads/2018/08/2_MGL8438-700x471.jpg"
                                         alt="Third slide"
                                     />
 
@@ -79,20 +81,20 @@ const Destaque = () => (
                                 </Carousel.Item>
                             </Carousel>
 
-                            <br/><div>
-                                <p size="sm"  className="app-iptu">IPTU: R$: 125,00</p>
+                            <br /><div>
+                                <p size="sm" className="app-iptu">IPTU: R$: 125,00</p>
                                 <h5 className="app-iptu__h5">Valor do Aluguel: R$: 2.300,00/mês</h5>
                             </div>
 
-                        </div><br/>
+                        </div><br />
 
                         <div>
-                            <h3 className="app-text" style={{fontWeight: "bold"}}>Conheça mais o imóvel</h3>
+                            <h3 className="app-text" style={{ fontWeight: "bold" }}>Conheça mais o imóvel</h3>
                             <p>Imóvel teste</p>
                         </div>
 
                         <div>
-                            <h3 className="app-text" style={{fontWeight: "bold"}}>Características</h3><br/>
+                            <h3 className="app-text" style={{ fontWeight: "bold" }}>Características</h3><br />
                             <Table striped bordered hover>
                                 <thead>
 
@@ -133,18 +135,18 @@ const Destaque = () => (
                                 </tbody>
                             </Table>
 
-                        </div><br/>
+                        </div><br />
 
                         <div>
-                            <h3 className="app-text" style={{fontWeight: "bold"}}>Estrutura</h3>
+                            <h3 className="app-text" style={{ fontWeight: "bold" }}>Estrutura</h3>
                             <ButtonToggle className="app-button_estrutura"> <FaCheck /> Ar Condicionado</ButtonToggle>{' '}
                             <ButtonToggle className="app-button_estrutura"> <FaCheck /> Churrasqueira</ButtonToggle>{' '}
                             <ButtonToggle className="app-button_estrutura"> <FaCheck /> Despensa</ButtonToggle>{' '}
                             <ButtonToggle className="app-button_estrutura"> <FaCheck /> Escritório</ButtonToggle>{' '}
-                        </div><br/>
+                        </div><br />
 
                         <div>
-                            <h3 className="app-text" style={{fontWeight: "bold"}}>Localização</h3><br/>
+                            <h3 className="app-text" style={{ fontWeight: "bold" }}>Localização</h3><br />
                             <div>
 
                             </div>
@@ -157,7 +159,7 @@ const Destaque = () => (
                             <Button outline color="success" size="lg" className="app-form"><FaWhatsapp /> Converse com o Corretor!</Button>{' '}
 
                             <Card>
-                                <CardHeader className="app-background__item1" style={{fontWeight: "bold"}}>Entre em Contato</CardHeader>
+                                <CardHeader className="app-background__item1" style={{ fontWeight: "bold" }}>Entre em Contato</CardHeader>
                                 <CardBody className="app-background__item2">
 
                                     <Form>
@@ -165,7 +167,7 @@ const Destaque = () => (
                                         <FormGroup row>
 
                                             <Col>
-                                                <CardTitle>Seu nome:</CardTitle>
+                                                <CardTitle style={{ fontWeight: "bold" }}>Seu nome:</CardTitle>
                                                 <Input type="name" name="name" id="exampleName" placeholder="Informe seu nome completo" />
                                             </Col>
 
@@ -174,7 +176,7 @@ const Destaque = () => (
                                         <FormGroup row>
 
                                             <Col>
-                                                <CardTitle>Seu telefone:</CardTitle>
+                                                <CardTitle style={{ fontWeight: "bold" }}>Seu telefone:</CardTitle>
                                                 <Input type="number" name="number" id="exampleNumber" placeholder="Informe seu telefone com DDD" />
                                             </Col>
 
@@ -183,7 +185,7 @@ const Destaque = () => (
                                         <FormGroup row>
 
                                             <Col>
-                                                <CardTitle>Seu e-mail:</CardTitle>
+                                                <CardTitle style={{ fontWeight: "bold" }}>Seu e-mail:</CardTitle>
                                                 <Input type="email" name="email" id="exampleEmail" placeholder="Informe seu melhor e-mail" />
                                             </Col>
 
@@ -192,15 +194,15 @@ const Destaque = () => (
                                         <FormGroup row>
 
                                             <Col>
-                                                <CardTitle>Sua mensagem:</CardTitle>
-                                                <Input type="textarea" name="text" id="exampleText" />
+                                                <CardTitle style={{ fontWeight: "bold" }}>Sua mensagem:</CardTitle>
+                                                <Input className="app-textarea" type="textarea" name="text" id="exampleText" />
                                             </Col>
 
                                         </FormGroup>
 
-                                        <Button color="danger" block>Enviar</Button><br/>
+                                        <Button color="danger" block>Enviar</Button><br />
 
-                                        <CardText className="text-center app-text" style={{fontWeight: "bold"}}>(48)3322-1234</CardText>
+                                        <CardText className="text-center app-text" style={{ fontWeight: "bold" }}>(48)3322-1234</CardText>
 
 
                                     </Form>
@@ -210,9 +212,9 @@ const Destaque = () => (
 
 
                             <div className="app-midia__button text-center">
-                                <Button size="sm" color="primary"><FaFacebookSquare />Compartilhar 0</Button>{' '}
-                                <Button size="sm" color="primary" href="#" ><FaTwitter />Twitter</Button>{' '}
-                                <Button size="sm" color="danger"><FaInstagramSquare />Instagram</Button>{' '}
+                                <Button className="app-facebook" size="sm" color="primary"><FaFacebookSquare />{' '}Compartilhar 0</Button>{' '}
+                                <Button className="app-twitter" size="sm" color="primary" href="#" ><FaTwitter />{' '}Twitter</Button>{' '}
+                                <Button size="sm" color="danger"><FaInstagram />{' '}Instagram</Button>{' '}
                             </div>
                         </div>
                     </Col>
@@ -221,6 +223,7 @@ const Destaque = () => (
 
 
         </Container>
+        <Footer/>
     </>
 
 )

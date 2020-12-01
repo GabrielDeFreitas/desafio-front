@@ -1,25 +1,28 @@
 .app-headerTop {
     align-items: center;
     background: #F25955;
-    display: flex;
-    justify-content: space-between;
     padding: 0 2rem;
-
+    padding-top: 14px;
+    padding-bottom: -12px;
 }
 
 .app-headerTop__message {
     color: #FFFF;
     font-family: sans-serif;
-    font-size: 14px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    font-size: 14px; 
 }
 
 .app-header__margen {
     margin: 0;
-    display: contents;
+    margin-top: -36px;
+    margin-left: 40px;
 }
 
 .app-sub{
-    margin-left: 20px;
+    margin-left: 40px;
+}
+
+.app-icon{
+    margin-right: 16px;
+    display: inline-flex;
 }

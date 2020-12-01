@@ -9,13 +9,11 @@ import HeaderTop from '../components/headerTop'
 import { Button } from 'reactstrap';
 import { Col, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Row } from 'reactstrap';
-import { ButtonToggle } from "reactstrap";
 
 import { Card, CardHeader, CardFooter, CardBody, CardTitle, CardText } from 'reactstrap';
 import Table from 'react-bootstrap/Table'
 
-import { FaBeer, FaFacebookSquare, FaTwitter, FaInstagram, FaCheck, FaWhatsapp } from 'react-icons/fa';
-
+import { FaFacebookSquare, FaTwitter, FaInstagram, FaCheck, FaWhatsapp } from 'react-icons/fa';
 
 const Destaque = () => (
     <>
@@ -138,15 +136,16 @@ const Destaque = () => (
                         </div><br />
 
                         <div>
-                            <h3 className="app-text" style={{ fontWeight: "bold" }}>Estrutura</h3>
-                            <ButtonToggle className="app-button_estrutura"> <FaCheck /> Ar Condicionado</ButtonToggle>{' '}
-                            <ButtonToggle className="app-button_estrutura"> <FaCheck /> Churrasqueira</ButtonToggle>{' '}
-                            <ButtonToggle className="app-button_estrutura"> <FaCheck /> Despensa</ButtonToggle>{' '}
-                            <ButtonToggle className="app-button_estrutura"> <FaCheck /> Escritório</ButtonToggle>{' '}
+                            <h3 className="app-text" style={{ fontWeight: "bold" }}>Estrutura</h3><br />
+                            <Button className="app-button_estrutura" color="success"> <FaCheck /> Ar Condicionado</Button>{' '}
+                            <Button className="app-button_estrutura" color="success"> <FaCheck /> Churrasqueira</Button>{' '}
+                            <Button className="app-button_estrutura" color="success"> <FaCheck /> Despensa</Button>{' '}
+                            <Button className="app-button_estrutura" color="success"> <FaCheck /> Escritório</Button>{' '}
                         </div><br />
 
                         <div>
                             <h3 className="app-text" style={{ fontWeight: "bold" }}>Localização</h3><br />
+                            
                             <div>
 
                             </div>
@@ -180,6 +179,7 @@ const Destaque = () => (
                                                 <Input type="number" name="number" id="exampleNumber" placeholder="Informe seu telefone com DDD" />
                                             </Col>
 
+
                                         </FormGroup>
 
                                         <FormGroup row>
@@ -200,7 +200,7 @@ const Destaque = () => (
 
                                         </FormGroup>
 
-                                        <Button color="danger" block>Enviar</Button><br />
+                                        <Button className="app-button" color="danger" block>Enviar</Button><br />
 
                                         <CardText className="text-center app-text" style={{ fontWeight: "bold" }}>(48)3322-1234</CardText>
 
@@ -214,7 +214,7 @@ const Destaque = () => (
                             <div className="app-midia__button text-center">
                                 <Button className="app-facebook" size="sm" color="primary"><FaFacebookSquare />{' '}Compartilhar 0</Button>{' '}
                                 <Button className="app-twitter" size="sm" color="primary" href="#" ><FaTwitter />{' '}Twitter</Button>{' '}
-                                <Button size="sm" color="danger"><FaInstagram />{' '}Instagram</Button>{' '}
+                                <Button className="app-button" size="sm" color="danger"><FaInstagram />{' '}Instagram</Button>{' '}
                             </div>
                         </div>
                     </Col>
@@ -223,7 +223,7 @@ const Destaque = () => (
 
 
         </Container>
-        <Footer/>
+        <Footer />
     </>
 
 )

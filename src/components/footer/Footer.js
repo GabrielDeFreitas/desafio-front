@@ -3,6 +3,7 @@ import { Button } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';
 import { Form, FormGroup, Label, Input, FormFeedback, FormText } from 'reactstrap';
 import { FaFacebookSquare, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { Navbar, NavDropdown, Nav } from 'react-bootstrap';
 import { Badge } from 'reactstrap';
 import { Link } from 'react-router-dom'
 import './Footer.css'
@@ -42,13 +43,13 @@ const Footer = () => (
                     <Col xs="3">
                         <h4 className="app-footer__conteudo" style={{ fontWeight: "bold" }}>Navegue<spam className="app-footer__conteudoSub"> Aqui!</spam></h4>
                         <hr className="app-footer__hr" />
-                        <ol>
-                            <li><a href="#" title="Home">Home</a></li>
-                            <li><a href="#" title="Destaque">Destaque</a></li>
-                            <li><a href="#" title="Alugar">Alugar</a></li>
-                            <li><a href="#" title="Comprar">Comprar</a></li>
-                            <li><a href="#" title="Contato">Contato</a></li>
-                        </ol>
+                        <Nav defaultActiveKey="/home" className="flex-column">
+                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link href="/destaque">Destaque</Nav.Link>
+                            <Nav.Link eventKey="">Alugar</Nav.Link>
+                            <Nav.Link eventKey="disabled" disabled>Comprar</Nav.Link>
+                            <Nav.Link >Contato</Nav.Link>
+                        </Nav>
 
                     </Col>
 

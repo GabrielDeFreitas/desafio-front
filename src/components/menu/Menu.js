@@ -1,40 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import './Menu.css'
-
+import { Navbar, NavDropdown, Nav } from 'react-bootstrap';
 
 const Menu = () => (
-    <nav class="app-menu">
-        <ul className="app-menu__list">
-            <li className="app-menu__item">
-                <Link className="app-menu__link" to="/">
-                    Home
-                </Link>
-            </li>
-            <li className="app-menu__item">
-                <Link className="app-menu__link" to="/destaque">
-                    Destaque
-                </Link>
-            </li>
-            <li className="app-menu__item">
-                <Link className="app-menu__link" to="/">
-                    Alugar
-                </Link>
-            </li>
-            <li className="app-menu__item">
-                <Link className="app-menu__link" to="/">
-                    Comprar
-                </Link>
-            </li>
-            <li className="app-menu__item">
-                <Link className="app-menu__link" to="/">
-                    Contato
-                </Link>
-            </li>
-        </ul>
-    </nav>
-    
-    
+    <Navbar className="app-menu__item" collapseOnSelect expand="lg">
+        <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
+            </Nav>
+            <Nav>
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/destaque">Destaque</Nav.Link>
+                <Nav.Link href="#Alugar">Alugar</Nav.Link>
+                <Nav.Link href="#Comprar">Comprar</Nav.Link>
+                <Nav.Link href="#Contato">Contato</Nav.Link>
+            </Nav>
+        </Navbar.Collapse>
+    </Navbar>
+
+
 )
 
 export default Menu

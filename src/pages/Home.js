@@ -11,8 +11,8 @@ import Image from 'react-bootstrap/Image'
 import { Card, Button, CardImg, CardTitle, CardText, CardDeck, CardSubtitle, CardBody, CardFooter, CardColumns } from 'reactstrap';
 import { Row, Col } from 'reactstrap';
 import { CardImgOverlay } from 'reactstrap';
-import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import { FaSearch, FaArrowDown } from "react-icons/fa"
+import { Form, FormGroup, Label, Input, FormText, Jumbotron } from 'reactstrap';
+import { FaSearch, FaArrowDown, FaLocationArrow} from "react-icons/fa"
 
 const Home = () => (
     <>
@@ -21,19 +21,19 @@ const Home = () => (
 
         <div className="app-home">
             <Container>
-                <div className="app-home__text">
-                    <div className="app-home__conteudo">
+                <Jumbotron className="app-home__conteudo">
+                    <div>
                         <h1 className="app-text__home" style={{ fontWeight: "bold" }}>ENCONTRE O ÍMOVEL IDEAL</h1>
                         <h1 className="app-text__home" style={{ fontWeight: "bold" }}>PARA VOCÊ E SUA FAMÍLIA</h1>
                         <h1 className="app-text__home" style={{ fontWeight: "bold" }}>MORAR NA PRAIA!</h1>
-                    </div><br />
-                    <div>
-                        <Button color="danger" size="lg">Quero <spam style={{ fontWeight: "bold" }}>Alugar!</spam></Button>{' '}
-                        <Button color="danger" size="lg">Quero <spam style={{ fontWeight: "bold" }}>Comprar!</spam></Button>{' '}
                     </div>
+                </Jumbotron>
+                <div>
+                    <Button color="danger" size="lg">Quero <spam style={{ fontWeight: "bold" }}>Alugar!</spam></Button>{' '}
+                    <Button color="danger" size="lg">Quero <spam style={{ fontWeight: "bold" }}>Comprar!</spam></Button>{' '}
                 </div>
             </Container>
-        </div>
+        </div><br />
 
         <Container>
             <div className="container">
@@ -168,120 +168,60 @@ const Home = () => (
             </div>
         </div>
 
-        <Container>
+        <div className="app-container__venda">
             <div className="container">
-                <h1 className="app-text">À Venda <spam></spam></h1>
-                <hr className="app-hd__home" />
-                <CardDeck>
-                    <Card>
-                        <CardImg top width="100%" src="https://cf.bstatic.com/images/hotel/max1024x768/136/136609367.jpg" alt="Card image cap" />
-                        <CardBody>
-                            <CardTitle tag="h5" className="app-text" style={{ fontWeight: "bold" }}>Linda Casa no Rio Tavares com vista para o Mar</CardTitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche</CardSubtitle>
-                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText>
-                            <Button color="danger" block>Ver Imóvel</Button><br />
-                        </CardBody>
-                        <CardFooter className="text-muted">
-                            <Row xs="1" sm="2" md="4">
-                                <Col>1</Col>
-                                <Col>2</Col>
-                                <Col>3</Col>
-                            </Row>
-                        </CardFooter>
-                    </Card>
-                    <Card>
-                        <CardImg top width="100%" src="https://cf.bstatic.com/images/hotel/max1024x768/136/136609367.jpg" alt="Card image cap" />
-                        <CardBody>
-                            <CardTitle tag="h5" className="app-text" style={{ fontWeight: "bold" }}>Linda Casa no Rio Tavares com vista para o Mar</CardTitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche</CardSubtitle>
-                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText>
-                            <Button color="danger" block>Ver Imóvel</Button><br />
-                        </CardBody>
-                        <CardFooter className="text-muted">
-                            <Row xs="1" sm="2" md="4">
-                                <Col>1</Col>
-                                <Col>2</Col>
-                                <Col>3</Col>
-                            </Row>
-                        </CardFooter>
-                    </Card>
-                    <Card>
-                        <CardImg top width="100%" src="https://cf.bstatic.com/images/hotel/max1024x768/136/136609367.jpg" alt="Card image cap" />
-                        <CardBody>
-                            <CardTitle tag="h5" className="app-text" style={{ fontWeight: "bold" }}>Linda Casa no Rio Tavares com vista para o Mar</CardTitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche</CardSubtitle>
-                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText>
-                            <Button color="danger" block>Ver Imóvel</Button><br />
-                        </CardBody>
-                        <CardFooter className="text-muted">
-                            <Row xs="1" sm="2" md="4">
-                                <Col>1</Col>
-                                <Col>2</Col>
-                                <Col>3</Col>
-                            </Row>
-                        </CardFooter>
-                    </Card>
-                </CardDeck>
-            </div><br />
-        </Container>
-
-        <div className="app-container__alugar">
-            <div className="container">
-                <h1 className="app-text">Para Alugar <spam><a href="url">Ver mais</a></spam></h1>
+                <h1 className="app-text">À Venda <spam><a className="app-verMais2" href="">Ver mais</a></spam></h1>
                 <hr className="app-hd__home" />
                 <br />
                 <CardDeck>
                     <Card>
-                        <CardImg top width="100%" src="https://cf.bstatic.com/images/hotel/max1024x768/136/136609367.jpg" alt="Card image cap" />
+                        <CardImg top width="100%" src="https://mariscalaluguel.com.br/storage/mariscalaluguel/4898047/grande.jpg?2019-01-26-105711" alt="Card image cap" />
                         <CardBody>
-                            <CardTitle tag="h5" className="app-text" style={{ fontWeight: "bold" }}>Linda Casa no Rio Tavares com vista para o Mar</CardTitle>
+                            <CardTitle tag="h5" className="app-textCard">Casa com 3 quartos no Campeche com ótima vista</CardTitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche</CardSubtitle>
-                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText>
-                            <Button color="danger" block>Ver Imóvel</Button><br />
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche<FaLocationArrow/></CardSubtitle>
+                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText><br/>
+                            <Button className="app-button" color="danger" block>Ver Imóvel</Button>
                         </CardBody>
                         <CardFooter className="text-muted">
-                            <Row xs="1" sm="2" md="4">
-                                <Col>1</Col>
-                                <Col>2</Col>
-                                <Col>3</Col>
+                            <Row className="text-center">
+                                <Col></Col>
+                                <Col>4</Col>
+                                <Col>180 m²</Col>
                             </Row>
                         </CardFooter>
                     </Card>
                     <Card>
-                        <CardImg top width="100%" src="https://cf.bstatic.com/images/hotel/max1024x768/136/136609367.jpg" alt="Card image cap" />
+                        <CardImg top width="100%" src="https://i.pinimg.com/originals/27/64/64/276464f1506a095c6836ac1c4448c186.jpg" alt="Card image cap" />
                         <CardBody>
-                            <CardTitle tag="h5" className="app-text" style={{ fontWeight: "bold" }}>Linda Casa no Rio Tavares com vista para o Mar</CardTitle>
+                            <CardTitle tag="h5" className="app-textCard">Casa com 3 quartos no Campeche com ótima vista</CardTitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche</CardSubtitle>
-                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText>
-                            <Button color="danger" block>Ver Imóvel</Button><br />
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">Casa - Coqueiros<FaLocationArrow/></CardSubtitle>
+                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 350.000,00</CardText><br/>
+                            <Button className="app-button" color="danger" block>Ver Imóvel</Button>
                         </CardBody>
                         <CardFooter className="text-muted">
-                            <Row xs="1" sm="2" md="4">
+                            <Row className="text-center">
                                 <Col>1</Col>
-                                <Col>2</Col>
-                                <Col>3</Col>
+                                <Col>4</Col>
+                                <Col>180 m²</Col>
                             </Row>
                         </CardFooter>
                     </Card>
                     <Card>
-                        <CardImg top width="100%" src="https://cf.bstatic.com/images/hotel/max1024x768/136/136609367.jpg" alt="Card image cap" />
+                        <CardImg top width="100%" src="https://s24938.pcdn.co/wp-content/uploads/2017/07/Francisco-Viana-Apartamento-Projetos-7-900x600.jpg" alt="Card image cap" />
                         <CardBody>
-                            <CardTitle tag="h5" className="app-text" style={{ fontWeight: "bold" }}>Linda Casa no Rio Tavares com vista para o Mar</CardTitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche</CardSubtitle>
-                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText>
-                            <Button color="danger" block>Ver Imóvel</Button><br />
+                            <CardTitle tag="h5" className="app-textCard">Apartamento no prédio XPTO com vista para a Lagoa </CardTitle>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Comercio/Industrial</CardSubtitle>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">Sala comercial - Itacurubi<FaLocationArrow/></CardSubtitle>
+                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 600.000,00</CardText><br/>
+                            <Button className="app-button" color="danger" block>Ver Imóvel</Button>
                         </CardBody>
                         <CardFooter className="text-muted">
-                            <Row xs="1" sm="2" md="4">
+                            <Row className="text-center">
                                 <Col>1</Col>
-                                <Col>2</Col>
-                                <Col>3</Col>
+                                <Col>4</Col>
+                                <Col>180 m²</Col>
                             </Row>
                         </CardFooter>
                     </Card>
@@ -289,6 +229,66 @@ const Home = () => (
             </div>
         </div>
 
+        <div className="app-container__alugar">
+            <div className="container">
+                <h1 className="app-text">Para Alugar <spam><a className="app-verMais" href="">Ver mais</a></spam></h1>
+                <hr className="app-hd__home" />
+                <br />
+                <CardDeck>
+                    <Card>
+                        <CardImg top width="100%" src="https://mariscalaluguel.com.br/storage/mariscalaluguel/4898047/grande.jpg?2019-01-26-105711" alt="Card image cap" />
+                        <CardBody>
+                            <CardTitle tag="h5" className="app-textCard">Casa com 3 quartos no Campeche com ótima vista</CardTitle>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche<FaLocationArrow/></CardSubtitle>
+                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText><br/>
+                            <Button className="app-button" color="danger" block>Ver Imóvel</Button>
+                        </CardBody>
+                        <CardFooter className="text-muted">
+                            <Row className="text-center">
+                                <Col>1</Col>
+                                <Col>4</Col>
+                                <Col>180 m²</Col>
+                            </Row>
+                        </CardFooter>
+                    </Card>
+                    <Card>
+                        <CardImg top width="100%" src="https://i.pinimg.com/originals/27/64/64/276464f1506a095c6836ac1c4448c186.jpg" alt="Card image cap" />
+                        <CardBody>
+                            <CardTitle tag="h5" className="app-textCard">Casa com 3 quartos no Campeche com ótima vista</CardTitle>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">Casa - Coqueiros <FaLocationArrow/></CardSubtitle>
+                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 350.000,00</CardText><br/>
+                            <Button className="app-button" color="danger" block>Ver Imóvel</Button>
+                        </CardBody>
+                        <CardFooter className="text-muted">
+                            <Row className="text-center">
+                                <Col>1</Col>
+                                <Col>4</Col>
+                                <Col>180 m²</Col>
+                            </Row>
+                        </CardFooter>
+                    </Card>
+                    <Card>
+                        <CardImg top width="100%" src="https://s24938.pcdn.co/wp-content/uploads/2017/07/Francisco-Viana-Apartamento-Projetos-7-900x600.jpg" alt="Card image cap" />
+                        <CardBody>
+                            <CardTitle tag="h5" className="app-textCard">Apartamento no prédio XPTO com vista para a Lagoa </CardTitle>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Comercio/Industrial</CardSubtitle>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">Sala comercial - Itacurubi<FaLocationArrow/></CardSubtitle>
+                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 600.000,00</CardText><br/>
+                            <Button className="app-button" color="danger" block>Ver Imóvel</Button>
+                        </CardBody>
+                        <CardFooter className="text-muted">
+                            <Row className="text-center">
+                                <Col>1</Col>
+                                <Col>4</Col>
+                                <Col>180 m²</Col>
+                            </Row>
+                        </CardFooter>
+                    </Card>
+                </CardDeck>
+            </div>
+        </div>
 
         <Footer />
     </>

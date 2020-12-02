@@ -7,9 +7,10 @@ import './Header.css'
 
 const Header = () => (
     <header className="app-header">
-        <Container>
+        <div className="app-menu">
         <Menu />
-        </Container>
+        </div>
+        
     </header>
 )
 

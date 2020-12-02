@@ -124,10 +124,26 @@
 .app-verMais {
     margin-left: 840px;
     font-size: 15px;
-    color: #F25955;;
+    color: #F25955;
 }
 .app-verMais2 {
     margin-left: 896px;
     font-size: 15px;
-    color: #F25955;;
+    color: #F25955;
+}
+
+.app-font{
+    font-family: sans-serif;
+}
+
+.app-icon{
+    color: black;
+}
+
+.app-iconSize{
+    margin-right: 10px;
+}
+.app-marge{
+    display: flex;
+    align-items: flex-end;
 }

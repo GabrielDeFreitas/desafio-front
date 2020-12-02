@@ -11,32 +11,50 @@ import Image from 'react-bootstrap/Image'
 import { Card, Button, CardImg, CardTitle, CardText, CardDeck, CardSubtitle, CardBody, CardFooter, CardColumns } from 'reactstrap';
 import { Row, Col } from 'reactstrap';
 import { CardImgOverlay } from 'reactstrap';
-import { Form, FormGroup, Label, Input, FormText, Jumbotron } from 'reactstrap';
-import { FaSearch, FaArrowDown, FaLocationArrow} from "react-icons/fa"
+import { Form, FormGroup, Label, Input, FormText, Jumbotron, Badge } from 'reactstrap';
+import { FaSearch, FaArrowDown, FaLocationArrow } from "react-icons/fa"
+import { GrHome } from "react-icons/gr";
+import { BiBed } from "react-icons/bi";
+import { FaWarehouse } from "react-icons/fa";
+
 
 const Home = () => (
     <>
         <HeaderTop />
         <Header />
 
-        <div className="app-home">
+        <div className="app-home app-font">
             <Container>
-                <Jumbotron fluid className="app-home__conteudo">
-                    <div>
-                        <h1 className="app-text__home" style={{ fontWeight: "bold" }}>ENCONTRE O ÍMOVEL IDEAL</h1>
-                        <h1 className="app-text__home" style={{ fontWeight: "bold" }}>PARA VOCÊ E SUA FAMÍLIA</h1>
-                        <h1 className="app-text__home" style={{ fontWeight: "bold" }}>MORAR NA PRAIA!</h1>
-                    </div>
-                </Jumbotron>
-                <div>
-                    <Button color="danger" size="lg">Quero <spam style={{ fontWeight: "bold" }}>Alugar!</spam></Button>{' '}
-                    <Button color="danger" size="lg">Quero <spam style={{ fontWeight: "bold" }}>Comprar!</spam></Button>{' '}
-                </div>
+
+                <Col sm="7">
+                    <Jumbotron fluid className="app-home__conteudo">
+                        <FormGroup >
+                            <Col>
+                                <h1 className="app-text__home" style={{ fontWeight: "bold" }}>ENCONTRE O ÍMOVEL IDEAL</h1>
+                                <h1 className="app-text__home" style={{ fontWeight: "bold" }}>PARA VOCÊ E SUA FAMÍLIA</h1>
+                                <h1 className="app-text__home" style={{ fontWeight: "bold" }}>MORAR NA PRAIA!</h1>
+                            </Col>
+                        </FormGroup>
+                    </Jumbotron>
+                </Col>
+                <Col>
+
+                    <FormGroup >
+                        <Col>
+                            <Button color="danger" size="lg">Quero <spam style={{ fontWeight: "bold" }}>Alugar!</spam></Button>{' '}
+                            <Button color="danger" size="lg">Quero <spam style={{ fontWeight: "bold" }}>Comprar!</spam></Button>{' '}
+
+                        </Col>
+                    </FormGroup>
+
+                </Col>
+
+
             </Container>
         </div><br />
 
         <Container>
-            <div className="container">
+            <div className="container app-font">
                 <Row xs="1" sm="2" md="4">
                     <Col>
                         <FormGroup >
@@ -105,7 +123,7 @@ const Home = () => (
                     <Col>
                         <FormGroup >
                             <Col>
-                                <Label>Filtro avançado</Label>{' '}<FaArrowDown />
+                                <Label style={{ color: "#F25955" }}>Filtro avançado</Label>{' '}<FaArrowDown style={{ color: "#F25955" }} />
                             </Col>
                         </FormGroup>
                     </Col>
@@ -122,7 +140,7 @@ const Home = () => (
             </div>
         </Container>
 
-        <div className="app-container__alugar">
+        <div className="app-container__alugar app-font">
             <div className="container">
                 <h1 className="text-center" style={{ fontWeight: "bold" }}>Ambiente no seu <spam className="app-text">estilo</spam> </h1>
                 <h4 className="text-center app-iptu__h5">Encontre o imóvel com a experiência que você quer viver</h4><br />
@@ -168,12 +186,12 @@ const Home = () => (
             </div>
         </div>
 
-        <div className="app-container__venda">
+        <div className="app-container__venda app-font">
             <div className="container">
-            <Row> 
-            <Col><h1 className="app-text">À Venda</h1></Col>
-            <Col sm="1"><a className="" href="">Ver mais</a></Col>
-            </Row>
+                <Row>
+                    <Col><h1 className="app-text">À Venda</h1></Col> 
+                    <a style={{ color: "#F25955" }} className="app-marge" href="">Ver mais</a>
+                </Row>
                 <br />
                 <CardDeck>
                     <Card>
@@ -181,15 +199,15 @@ const Home = () => (
                         <CardBody>
                             <CardTitle tag="h5" className="app-textCard">Linda Casa no Rio Tavares com vista para o Mar</CardTitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche<FaLocationArrow/></CardSubtitle>
-                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText><br/>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche<FaLocationArrow /></CardSubtitle>
+                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText><br />
                             <Button className="app-button" color="danger" block>Ver Imóvel</Button>
                         </CardBody>
                         <CardFooter className="text-muted">
                             <Row className="text-center">
-                                <Col></Col>
-                                <Col>4</Col>
-                                <Col>180 m²</Col>
+                                <Col><BiBed className="app-icon" size={40} /><p className="app-iconSize">1</p></Col>
+                                <Col><FaWarehouse className="app-icon" size={40} /><p className="app-iconSize">4</p></Col>
+                                <Col><GrHome className="app-icon" size={40} /><p className="app-iconSize">180 m²</p></Col>
                             </Row>
                         </CardFooter>
                     </Card>
@@ -198,15 +216,15 @@ const Home = () => (
                         <CardBody>
                             <CardTitle tag="h5" className="app-textCard">Casa com 3 quartos no Campeche com ótima vista</CardTitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted">Casa - Coqueiros<FaLocationArrow/></CardSubtitle>
-                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 350.000,00</CardText><br/>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">Casa - Coqueiros<FaLocationArrow /></CardSubtitle>
+                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 350.000,00</CardText><br />
                             <Button className="app-button" color="danger" block>Ver Imóvel</Button>
                         </CardBody>
                         <CardFooter className="text-muted">
                             <Row className="text-center">
-                                <Col>1</Col>
-                                <Col>4</Col>
-                                <Col>180 m²</Col>
+                                <Col><BiBed className="app-icon" size={40} /><p className="app-iconSize">1</p></Col>
+                                <Col><FaWarehouse className="app-icon" size={40} /><p className="app-iconSize">4</p></Col>
+                                <Col><GrHome className="app-icon" size={40} /><p className="app-iconSize">180 m²</p></Col>
                             </Row>
                         </CardFooter>
                     </Card>
@@ -215,15 +233,15 @@ const Home = () => (
                         <CardBody>
                             <CardTitle tag="h5" className="app-textCard">Apartamento no prédio XPTO com vista para a Lagoa </CardTitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Comercio/Industrial</CardSubtitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted">Sala comercial - Itacurubi<FaLocationArrow/></CardSubtitle>
-                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 600.000,00</CardText><br/>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">Sala comercial - Itacurubi<FaLocationArrow /></CardSubtitle>
+                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 600.000,00</CardText><br />
                             <Button className="app-button" color="danger" block>Ver Imóvel</Button>
                         </CardBody>
                         <CardFooter className="text-muted">
                             <Row className="text-center">
-                                <Col>1</Col>
-                                <Col>4</Col>
-                                <Col>180 m²</Col>
+                                <Col><BiBed className="app-icon" size={40} /><p className="app-iconSize">1</p></Col>
+                                <Col><FaWarehouse className="app-icon" size={40} /><p className="app-iconSize">4</p></Col>
+                                <Col><GrHome className="app-icon" size={40} /><p className="app-iconSize">180 m²</p></Col>
                             </Row>
                         </CardFooter>
                     </Card>
@@ -231,30 +249,30 @@ const Home = () => (
             </div>
         </div>
 
-        <div className="app-container__alugar">
+        <div className="app-container__alugar app-font">
             <div className="container">
-            <Row> 
-            <Col><h1 className="app-text">Para Alugar</h1></Col>
-            <Col sm="1"><a className="" href="">Ver mais</a></Col>
-            </Row>
-                
+                <Row>
+                    <Col><h1 className="app-text">Para Alugar</h1></Col>
+                    <a style={{ color: "#F25955" }} className="app-marge" href="">Ver mais</a>
+                </Row>
+
                 <hr className="app-hd__home" />
                 <br />
                 <CardDeck>
                     <Card>
                         <CardImg top width="100%" src="https://mariscalaluguel.com.br/storage/mariscalaluguel/4898047/grande.jpg?2019-01-26-105711" alt="Card image cap" />
                         <CardBody>
-                        <CardTitle tag="h5" className="app-textCard">Linda Casa no Rio Tavares com vista para o Mar</CardTitle>
+                            <CardTitle tag="h5" className="app-textCard">Linda Casa no Rio Tavares com vista para o Mar</CardTitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche<FaLocationArrow/></CardSubtitle>
-                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText><br/>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche<FaLocationArrow /></CardSubtitle>
+                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText><br />
                             <Button className="app-button" color="danger" block>Ver Imóvel</Button>
                         </CardBody>
                         <CardFooter className="text-muted">
                             <Row className="text-center">
-                                <Col>1</Col>
-                                <Col>4</Col>
-                                <Col>180 m²</Col>
+                                <Col><BiBed className="app-icon" size={40} /><p className="app-iconSize">1</p></Col>
+                                <Col><FaWarehouse className="app-icon" size={40} /><p className="app-iconSize">4</p></Col>
+                                <Col><GrHome className="app-icon" size={40} /><p className="app-iconSize">180 m²</p></Col>
                             </Row>
                         </CardFooter>
                     </Card>
@@ -263,15 +281,15 @@ const Home = () => (
                         <CardBody>
                             <CardTitle tag="h5" className="app-textCard">Casa com 3 quartos no Campeche com ótima vista</CardTitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted">Casa - Coqueiros <FaLocationArrow/></CardSubtitle>
-                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 350.000,00</CardText><br/>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">Casa - Coqueiros <FaLocationArrow /></CardSubtitle>
+                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 350.000,00</CardText><br />
                             <Button className="app-button" color="danger" block>Ver Imóvel</Button>
                         </CardBody>
                         <CardFooter className="text-muted">
                             <Row className="text-center">
-                                <Col>1</Col>
-                                <Col>4</Col>
-                                <Col>180 m²</Col>
+                                <Col><BiBed className="app-icon" size={40} /><p className="app-iconSize">1</p></Col>
+                                <Col><FaWarehouse className="app-icon" size={40} /><p className="app-iconSize">4</p></Col>
+                                <Col><GrHome className="app-icon" size={40} /><p className="app-iconSize">180 m²</p></Col>
                             </Row>
                         </CardFooter>
                     </Card>
@@ -280,15 +298,15 @@ const Home = () => (
                         <CardBody>
                             <CardTitle tag="h5" className="app-textCard">Apartamento no prédio XPTO com vista para a Lagoa </CardTitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Comercio/Industrial</CardSubtitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted">Sala comercial - Itacurubi<FaLocationArrow/></CardSubtitle>
-                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 600.000,00</CardText><br/>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">Sala comercial - Itacurubi<FaLocationArrow /></CardSubtitle>
+                            <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 600.000,00</CardText><br />
                             <Button className="app-button" color="danger" block>Ver Imóvel</Button>
                         </CardBody>
                         <CardFooter className="text-muted">
                             <Row className="text-center">
-                                <Col>1</Col>
-                                <Col>4</Col>
-                                <Col>180 m²</Col>
+                                <Col><BiBed className="app-icon" size={40} /><p className="app-iconSize">1</p></Col>
+                                <Col><FaWarehouse className="app-icon" size={40} /><p className="app-iconSize">4</p></Col>
+                                <Col><GrHome className="app-icon" size={40} /><p className="app-iconSize">180 m²</p></Col>
                             </Row>
                         </CardFooter>
                     </Card>

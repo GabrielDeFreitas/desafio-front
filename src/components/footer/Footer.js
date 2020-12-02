@@ -10,7 +10,7 @@ import './Footer.css'
 
 
 const Footer = () => (
-    <footer>
+    <footer className="app-font">
 
         <div className="app-footer__news text-center">
             <div className="app-footer__message">
@@ -40,7 +40,7 @@ const Footer = () => (
         <div className="app-background">
             <Container>
                 <Row>
-                    <Col xs="3">
+                    <Col sm={3}>
                         <h4 className="app-footer__conteudo" style={{ fontWeight: "bold" }}>Navegue<spam className="app-footer__conteudoSub"> Aqui!</spam></h4>
                         <hr className="app-footer__hr" />
                         <Nav defaultActiveKey="/home" className="flex-column">
@@ -53,7 +53,7 @@ const Footer = () => (
 
                     </Col>
 
-                    <Col xs="6">
+                    <Col sm={6}>
                         <h4 className="app-footer__conteudo" style={{ fontWeight: "bold" }}>Nos<spam className="app-footer__conteudoSub"> Conheça!</spam> </h4>
                         <hr className="app-footer__hr" />
                         <p className="app-footer__conteudo">
@@ -68,7 +68,7 @@ const Footer = () => (
 
                     </Col>
 
-                    <Col>
+                    <Col sm={3}>
                         <div>
                             <Button className="app-button" color="danger"><FaFacebookSquare /></Button>{' '}
                             <Button className="app-button" color="danger"><FaTwitter /></Button>{' '}

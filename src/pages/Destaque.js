@@ -7,33 +7,27 @@ import Header from '../components/header'
 import HeaderTop from '../components/headerTop'
 
 import { Button } from 'reactstrap';
-import { Col, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Col, Form, FormGroup, Label, Input, FormText, Modal } from 'reactstrap';
 import { Row } from 'reactstrap';
 
 import { Card, CardHeader, CardFooter, CardBody, CardTitle, CardText } from 'reactstrap';
 import Table from 'react-bootstrap/Table'
 
 import { FaFacebookSquare, FaTwitter, FaInstagram, FaCheck, FaWhatsapp } from 'react-icons/fa';
-//import { Map, GoogleApiWrapper } from 'google-maps-react';
-//import { GoogleMap, LoadScript } from '@react-google-maps/api';
-//import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
-//import { GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps';
 import Map from './Map';
 import Credentials from './credentials';
-//const urlMapa = `https://maps.googleapis.com/maps/api/js?v3.exp&key=${Credentials.mapsKey}`;
-
 const urlMapa = `https://maps.googleapis.com/maps/api/js?key=${Credentials.mapsKey}&callback=initMap`;
 
-const teste = 'alexandre'
 
-const Destaque = () => (    
+
+const Destaque = () => (
     <>
         <HeaderTop />
         <Header />
 
         <div className="app-destaque">
             <div className="app-destaque__text">
-                <h1 className="app-text" style={{ fontWeight: "bold" }}>Linda Casa no Rio Tavares com vista para o Mar</h1>
+                <h1 className="app-text">Linda Casa no Rio Tavares com vista para o Mar</h1>
                 <p className="app-iptu__h5" style={{ fontWeight: "bold" }}>Imóvel Residencial - Apartamento - Campeche</p>
             </div>
         </div>
@@ -41,7 +35,7 @@ const Destaque = () => (
         <Container>
             <Container>
                 <Row>
-                    <Col xs="8">
+                    <Col sm={8}>
 
                         <div>
                             <Carousel>
@@ -98,12 +92,12 @@ const Destaque = () => (
                         </div><br />
 
                         <div>
-                            <h3 className="app-text" style={{ fontWeight: "bold" }}>Conheça mais o imóvel</h3>
+                            <h3 className="app-text">Conheça mais o imóvel</h3>
                             <p>Imóvel teste</p>
                         </div>
 
                         <div>
-                            <h3 className="app-text" style={{ fontWeight: "bold" }}>Características</h3><br />
+                            <h3 className="app-text">Características</h3><br />
                             <Table striped bordered hover>
                                 <thead>
 
@@ -131,7 +125,7 @@ const Destaque = () => (
                                     </tr>
                                     <tr>
                                         <td colSpan="2">Garagem Coberta</td>
-                                        <td>2r</td>
+                                        <td>2</td>
                                     </tr>
                                     <tr>
                                         <td colSpan="2">Área Total</td>
@@ -147,30 +141,32 @@ const Destaque = () => (
                         </div><br />
 
                         <div>
-                            <h3 className="app-text" style={{ fontWeight: "bold" }}>Estrutura</h3><br />
-                            <Button className="app-button_estrutura" color="success"> <FaCheck /> Ar Condicionado</Button>{' '}
-                            <Button className="app-button_estrutura" color="success"> <FaCheck /> Churrasqueira</Button>{' '}
-                            <Button className="app-button_estrutura" color="success"> <FaCheck /> Despensa</Button>{' '}
-                            <Button className="app-button_estrutura" color="success"> <FaCheck /> Escritório</Button>{' '}
+                            <h3 className="app-text">Estrutura</h3><br />
+                            <div>
+                                <Button  className="app-button_estrutura" color="success"> <FaCheck /> Ar Condicionado</Button>{' '}
+                                <Button  className="app-button_estrutura" color="success"> <FaCheck /> Churrasqueira</Button>{' '}
+                                <Button  className="app-button_estrutura" color="success"> <FaCheck /> Despensa</Button>{' '}
+                                <Button  className="app-button_estrutura" color="success"> <FaCheck /> Escritório</Button>{' '}
+                            </div>
                         </div><br />
 
                         <div>
-                            <h3 className="app-text" style={{ fontWeight: "bold" }}>Localização</h3><br />
+                            <h3 className="app-text">Localização</h3><br />
                             <div>
-                            
-                            <Map
-                                googleMapURL= {urlMapa}
-                                containerElement={<div style={{height: '400px'}}/>}
-                                mapElement={<div style={{height: '100%'}}/>}
-                                loadingElement= {<p>Carregando</p>}
-                            />
+
+                                <Map
+                                    googleMapURL={urlMapa}
+                                    containerElement={<div style={{ height: '400px' }} />}
+                                    mapElement={<div style={{ height: '100%' }} />}
+                                    loadingElement={<p>Carregando</p>}
+                                />
 
                             </div>
                         </div>
 
                     </Col>
 
-                    <Col xs="4">
+                    <Col sm={4}>
                         <div>
                             <Button outline color="success" size="lg" className="app-form"><FaWhatsapp /> Converse com o Corretor!</Button>{' '}
 
@@ -212,13 +208,14 @@ const Destaque = () => (
 
                                             <Col>
                                                 <CardTitle style={{ fontWeight: "bold" }}>Sua mensagem:</CardTitle>
-                                                <Input className="app-textarea" type="textarea" name="text" id="exampleText" />
+                                                <Input style={{ height: '150px' }} className="app-textarea" type="textarea" name="text" id="exampleText"
+                                                    placeholder="Quero ter mais informações sobre esse imóvel, Imóvel Residencial, Casa, Campeche, Florianópolis! (#01)" />
                                             </Col>
 
                                         </FormGroup>
 
                                         <Button className="app-button" color="danger" block>Enviar</Button><br />
-
+                                        <Modal />
                                         <CardText className="text-center app-text" style={{ fontWeight: "bold" }}>(48)3322-1234</CardText>
 
 
@@ -247,4 +244,3 @@ const Destaque = () => (
 
 export default Destaque;
 
-  

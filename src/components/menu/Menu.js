@@ -1,15 +1,18 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap';
+import { Media } from 'reactstrap';
 
 const Menu = () => (
-    <Navbar className="app-menu__item" collapseOnSelect expand="lg"> 
-        <Navbar.Brand href="/">IMÓBILIARIA</Navbar.Brand>
+    <Navbar className="app-menu__item" collapseOnSelect expand="lg">
+        <Navbar.Brand href="/">
+            IMÓBILIARIA
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
             </Nav>
             <Nav>
-                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/" className="app-nav__Color">Home</Nav.Link>
                 <Nav.Link href="/destaque">Destaque</Nav.Link>
                 <Nav.Link href="#Alugar">Alugar</Nav.Link>
                 <Nav.Link href="#Comprar">Comprar</Nav.Link>
@@ -17,6 +20,7 @@ const Menu = () => (
             </Nav>
         </Navbar.Collapse>
     </Navbar>
+
 )
 
 export default Menu

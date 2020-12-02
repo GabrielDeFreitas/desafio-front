@@ -4,6 +4,10 @@
     text-align: center;
 }
 
+.app-font{
+    font-family: sans-serif;
+}
+
 .app-footer__news {
     background: #343A41;
     padding: .5rem 2rem;

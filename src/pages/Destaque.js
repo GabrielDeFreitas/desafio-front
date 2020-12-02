@@ -14,8 +14,19 @@ import { Card, CardHeader, CardFooter, CardBody, CardTitle, CardText } from 'rea
 import Table from 'react-bootstrap/Table'
 
 import { FaFacebookSquare, FaTwitter, FaInstagram, FaCheck, FaWhatsapp } from 'react-icons/fa';
+//import { Map, GoogleApiWrapper } from 'google-maps-react';
+//import { GoogleMap, LoadScript } from '@react-google-maps/api';
+//import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+//import { GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps';
+import Map from './Map';
+import Credentials from './credentials';
+//const urlMapa = `https://maps.googleapis.com/maps/api/js?v3.exp&key=${Credentials.mapsKey}`;
 
-const Destaque = () => (
+const urlMapa = `https://maps.googleapis.com/maps/api/js?key=${Credentials.mapsKey}&callback=initMap`;
+
+const teste = 'alexandre'
+
+const Destaque = () => (    
     <>
         <HeaderTop />
         <Header />
@@ -145,8 +156,14 @@ const Destaque = () => (
 
                         <div>
                             <h3 className="app-text" style={{ fontWeight: "bold" }}>Localização</h3><br />
-                            
                             <div>
+                            
+                            <Map
+                                googleMapURL= {urlMapa}
+                                containerElement={<div style={{height: '400px'}}/>}
+                                mapElement={<div style={{height: '100%'}}/>}
+                                loadingElement= {<p>Carregando</p>}
+                            />
 
                             </div>
                         </div>
@@ -228,4 +245,6 @@ const Destaque = () => (
 
 )
 
-export default Destaque
+export default Destaque;
+
+  

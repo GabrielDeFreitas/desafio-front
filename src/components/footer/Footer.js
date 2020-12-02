@@ -44,11 +44,11 @@ const Footer = () => (
                         <h4 className="app-footer__conteudo" style={{ fontWeight: "bold" }}>Navegue<spam className="app-footer__conteudoSub"> Aqui!</spam></h4>
                         <hr className="app-footer__hr" />
                         <Nav defaultActiveKey="/home" className="flex-column">
-                            <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="/destaque">Destaque</Nav.Link>
-                            <Nav.Link eventKey="">Alugar</Nav.Link>
+                            <Nav.Link className="app-navColor" href="/">Home</Nav.Link>
+                            <Nav.Link className="app-navColor" href="/destaque">Destaque</Nav.Link>
+                            <Nav.Link ventKey="disabled" disabled>Alugar</Nav.Link>
                             <Nav.Link eventKey="disabled" disabled>Comprar</Nav.Link>
-                            <Nav.Link >Contato</Nav.Link>
+                            <Nav.Link ventKey="disabled" disabled>Contato</Nav.Link>
                         </Nav>
 
                     </Col>

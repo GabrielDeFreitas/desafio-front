@@ -21,7 +21,7 @@ const Home = () => (
 
         <div className="app-home">
             <Container>
-                <Jumbotron className="app-home__conteudo">
+                <Jumbotron fluid className="app-home__conteudo">
                     <div>
                         <h1 className="app-text__home" style={{ fontWeight: "bold" }}>ENCONTRE O ÍMOVEL IDEAL</h1>
                         <h1 className="app-text__home" style={{ fontWeight: "bold" }}>PARA VOCÊ E SUA FAMÍLIA</h1>
@@ -170,14 +170,16 @@ const Home = () => (
 
         <div className="app-container__venda">
             <div className="container">
-                <h1 className="app-text">À Venda <spam><a className="app-verMais2" href="">Ver mais</a></spam></h1>
-                <hr className="app-hd__home" />
+            <Row> 
+            <Col><h1 className="app-text">À Venda</h1></Col>
+            <Col sm="1"><a className="" href="">Ver mais</a></Col>
+            </Row>
                 <br />
                 <CardDeck>
                     <Card>
                         <CardImg top width="100%" src="https://mariscalaluguel.com.br/storage/mariscalaluguel/4898047/grande.jpg?2019-01-26-105711" alt="Card image cap" />
                         <CardBody>
-                            <CardTitle tag="h5" className="app-textCard">Casa com 3 quartos no Campeche com ótima vista</CardTitle>
+                            <CardTitle tag="h5" className="app-textCard">Linda Casa no Rio Tavares com vista para o Mar</CardTitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche<FaLocationArrow/></CardSubtitle>
                             <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText><br/>
@@ -231,14 +233,18 @@ const Home = () => (
 
         <div className="app-container__alugar">
             <div className="container">
-                <h1 className="app-text">Para Alugar <spam><a className="app-verMais" href="">Ver mais</a></spam></h1>
+            <Row> 
+            <Col><h1 className="app-text">Para Alugar</h1></Col>
+            <Col sm="1"><a className="" href="">Ver mais</a></Col>
+            </Row>
+                
                 <hr className="app-hd__home" />
                 <br />
                 <CardDeck>
                     <Card>
                         <CardImg top width="100%" src="https://mariscalaluguel.com.br/storage/mariscalaluguel/4898047/grande.jpg?2019-01-26-105711" alt="Card image cap" />
                         <CardBody>
-                            <CardTitle tag="h5" className="app-textCard">Casa com 3 quartos no Campeche com ótima vista</CardTitle>
+                        <CardTitle tag="h5" className="app-textCard">Linda Casa no Rio Tavares com vista para o Mar</CardTitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted" style={{ fontWeight: "bold" }}>Imóvel Residencial</CardSubtitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted">Apartamento - Campeche<FaLocationArrow/></CardSubtitle>
                             <CardText tag="h3" className="app-text" style={{ fontWeight: "bold" }}>R$: 400.000,00</CardText><br/>

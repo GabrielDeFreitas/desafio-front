@@ -8,7 +8,7 @@ import { FaRegEnvelope, FaRegClock, FaLocationArrow } from 'react-icons/fa';
 const HeaderTop = () => (
     <header className="app-headerTop">
 
-        
+        <div>
             <Row className="app-headerTop__message">
                 <Col>
 
@@ -34,7 +34,7 @@ const HeaderTop = () => (
                     </div>
                 </Col>
             </Row>
-        
+        </div>   
 
     </header>
 )

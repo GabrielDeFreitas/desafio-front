@@ -1,9 +1,9 @@
 import React from 'react'
-import { Navbar, NavDropdown, Nav } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 
 const Menu = () => (
-    <Navbar className="app-menu__item" collapseOnSelect expand="lg">
-        <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+    <Navbar className="app-menu__item" collapseOnSelect expand="lg"> 
+        <Navbar.Brand href="/">IMÓBILIARIA</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
@@ -17,8 +17,6 @@ const Menu = () => (
             </Nav>
         </Navbar.Collapse>
     </Navbar>
-
-
 )
 
 export default Menu
